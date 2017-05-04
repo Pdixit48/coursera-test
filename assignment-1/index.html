@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="app" >
+<html ng-app='mod'>
   <head>
     <meta charset="utf-8">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <title>coursera assignment 1 </title>
+    <title></title>
   </head>
-  <body ng-controller="homeCtrl">
-    <input type="text" ng-model="enteredText" />
-    <h3> Number of item entered is more than </h3>
-    {{enteredText}}
+  <body ng-controller='LunchCheckController'>
+    <input type="text"
+             ng-model="enteredText">
+    <button type="button" name="button" ng-click="checkWordsCount()" >Check If Too Much</button>
   </body>
 </html>
