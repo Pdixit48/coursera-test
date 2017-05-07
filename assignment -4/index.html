@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  </head>
+  <body>
+
+    <ui-view></ui-view>
+
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/menuapp/modules/menuapp.module.js"></script>
+	<script src="src/menuapp/modules/data.module.js"></script>
+	<script src="src/menuapp/services/menudata.service.js"></script>
+	<script src="src/routes.js"></script>
+	<script src="src/menuapp/components/categories.component.js"></script>
+	<script src="src/menuapp/controllers/categories.controller.js"></script>
+	<script src="src/menuapp/components/items.component.js"></script>
+	<script src="src/menuapp/controllers/items.controller.js"></script>
+</html>
