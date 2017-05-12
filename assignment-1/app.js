@@ -19,7 +19,7 @@ function fun1 ($scope) {
      $scope.enteredText = "Too much!";
    }
    else if ($scope.enteredText == "") {
-     $scope.enteredText = "Empty";
+     $scope.enteredText = "Please enter data first";
    }
    else{
      $scope.enteredText = "Enjoy!";
