@@ -28,7 +28,7 @@ function RegistrationController($scope,MenuService, ApiPath) {
         console.log(error);
         reg.user.error=true;
      })
-    }
+   };
   //ng-blur function end
 
 
