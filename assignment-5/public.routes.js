@@ -4,9 +4,6 @@
 angular.module('public')
 .config(routeConfig);
 
-/**
- * Configures the routes and views
- */
 routeConfig.$inject = ['$stateProvider'];
 function routeConfig ($stateProvider) {
   // Routes

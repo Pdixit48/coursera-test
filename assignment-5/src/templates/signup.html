@@ -6,30 +6,26 @@
   <fieldset>
       <legend>Registration</legend>
       <form name='regForm' novalidate>
-
         <input type="text" name="firstname" placeholder="First Name"
           ng-model="reg.user.firstname"
           required
           minlength="2"
           ng-maxlength="10" style="color:black">
           {{ reg.user.firstname }}
-          <span
-            ng-if="(regForm.firstname.$error.minlength || regForm.firstname.$error.required) && regForm.firstname.$touched">
+          <span ng-if="(regForm.firstname.$error.minlength || regForm.firstname.$error.required) && regForm.firstname.$touched">
             First Name must be at least 2 characters long
           </span>
           <span ng-if="regForm.firstname.$error.maxlength && regForm.firstname.$touched">
             First name must not be longer than 10 characters
           </span>
           <br>
-
           <input type="text" name="lastname" placeholder="Last Name"
             ng-model="reg.user.lastname"
             required
             minlength="2"
             ng-maxlength="10" style="color:black">
             {{ reg.user.lastname }}
-            <span
-              ng-if="(regForm.lastname.$error.minlength || regForm.lastname.$error.required) && regForm.lastname.$touched">
+            <span ng-if="(regForm.lastname.$error.minlength || regForm.lastname.$error.required) && regForm.lastname.$touched">
               Last Name must be at least 2 characters long
             </span>
             <span ng-if="regForm.lastname.$error.maxlength && regForm.lastname.$touched">
@@ -54,15 +50,16 @@
           <br>
 
         <input type="text" name="favdish" placeholder="Favorite Dish Code"
-            ng-model="reg.user.favdish"
+          ng-blur="reg.favdishCheck()"  ng-model="reg.user.favdish"    //ng-blur event is added for bonus task
             required
             minlength="2"
-            ng-maxlength="3" style="color:black">
+            ng-maxlength="10" style="color:black">
             {{ reg.user.favdish }}
-          <span
-            ng-if="(regForm.favdish.$error.minlength || regForm.favdish.$error.required) && regForm.favdish.$touched">
+
+          <span ng-if="(regForm.favdish.$error.minlength || regForm.favdish.$error.required) && regForm.favdish.$touched">
             Favorite Dish must be at least 2 characters long
-          </span><span ng-if="reg.user.error"> No such menu number exists</span>
+          </span><br>
+          <span ng-if="reg.user.error"> No such menu number exists</span><br>
           <span ng-if="regForm.favdish.$error.maxlength && regForm.favdish.$touched">
             Favorite Dish must not be longer than 10 characters
           </span>
@@ -100,8 +97,6 @@
           <p class="menu-item-details">{{reg.data.description}}</p>
         </div>
      </div>
-
-      <!--******************************************** -->
   </div>
 
 </div>
